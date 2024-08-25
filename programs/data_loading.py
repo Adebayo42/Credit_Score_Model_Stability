@@ -71,7 +71,7 @@ def load_files():
     """
     
     # Assign variable to path name
-    path = "../data/"
+    path = "./data/"
     
     # Store loaded files in a dictionary
     #globals()["files_dict"] = {}
