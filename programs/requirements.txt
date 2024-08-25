@@ -4,3 +4,7 @@ category_encoders
 shap
 stqdm
 streamlit
+seaborn
+pandas
+numpy
+matplotlib
