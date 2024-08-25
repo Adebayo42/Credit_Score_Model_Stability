@@ -9,7 +9,7 @@
 import os
 import pandas as pd
 import numpy as np
-from tqdm import tqdm
+from stqdm import stqdm
 import streamlit as st
 
 # Function 0: Create dictionaries to store file names
@@ -84,9 +84,9 @@ def load_files():
     try:
         files = file_names(path)
         progress_text = "Data loading..."
-        my_bar = st.progress(0, text=progress_text)
-        for i, key in tqdm(enumerate(files), desc="Loading Data", total=len(files)):
-            my_bar.progress(i/6, text=progress_text)
+        #my_bar = st.progress(0, text=progress_text)
+        for i, key in stqdm(enumerate(files), desc="Loading Data", total=len(files)):
+            #my_bar.progress(i/6, text=progress_text)
             if key == 'bureau_balance':
                 files_dict[key] = pd.read_csv(path + files[key], index_col='SK_ID_BUREAU')
             else:
