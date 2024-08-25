@@ -7,6 +7,7 @@
 import data_loading as data
 import pandas as pd
 import feature_engineering as feat_eng
+import missing_value_handler as mvh
 import data_exploration as xplore
 import gc
 from sklearn.model_selection import train_test_split
@@ -65,7 +66,7 @@ def split_train_test():
     global X_train, X_test, y_train, y_test
     
     # Split dataset to train and test set
-    X_train, X_test, y_train, y_test = train_test_split(feat_eng.dataset, xplore.Y, 
+    X_train, X_test, y_train, y_test = train_test_split(mvh.X_input, xplore.Y, 
                                                         test_size = 0.3,
                                                         stratify = xplore.Y,
                                                         random_state =42)   
