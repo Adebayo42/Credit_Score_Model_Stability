@@ -67,7 +67,7 @@ def target_variable_EDA():
     
     try:
         # Split the target variable from the application_train dataset
-        globals()['Y'] = data.files_dict["dataset"][['TARGET']].copy()
+        globals()['Y'] = data.files_dict["Y"][['TARGET']].copy()
 
         # Distribution of Target variable
         value_counts = Y['TARGET'].value_counts()
@@ -125,7 +125,7 @@ def input_variable_EDA():
     """
     try:
         # Split the input variable from the application_train dataset
-        globals()["X"] = data.files_dict["dataset"].drop('TARGET', axis=1).copy()
+        globals()["X"] = data.files_dict["dataset"].copy()
 
         ###-------- Exploratory Analysis on numeric and non-numeric input variables-------###
         # Identify numeric and non-numeric features
