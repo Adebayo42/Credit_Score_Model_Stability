@@ -94,7 +94,7 @@ elif choice == "Load Data":
              includes multiple interconnected tables covering loan applications, borrower demographics, and credit histories. \
              This dataset's richness and complexity make it ideal for exploring credit scoring modelling, \
              with seven related tables offering diverse data for analysis.")
-    st.image("../data/Picture.jpg")
+    st.image("./data/Picture.jpg")
     
     if st.button("Load Dataset"):
         data.load_files()
