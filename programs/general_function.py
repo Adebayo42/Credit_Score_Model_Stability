@@ -77,7 +77,7 @@ def split_train_test():
     
     # Create name for the dataset using dictionary
     names = ["dataset", "trainset", "testset"]
-    datas = [feat_eng.dataset, X_train, X_test]
+    datas = [mvh.X_input, X_train, X_test]
     names_dict = dict(zip(names,datas))
     # Dataset shape
     for name, data in stqdm(names_dict.items(), desc="Splitting dataset"):
