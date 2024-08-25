@@ -54,7 +54,7 @@ def file_names(path):
 ##############################################################################
 files_dict = {}
 
-@st.cache_data
+st.cache_data
 def load_files():    
     
     """
